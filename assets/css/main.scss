@@ -7,3 +7,78 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Custom styles for AMALFI project */
+
+/* Landing page: center main content and improve typography */
+.page__content {
+  p {
+    font-size: 1.125em; /* Increase body text size from default */
+    line-height: 1.8; /* Better readability */
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Center the tagline on overlay headers */
+.page__hero--overlay {
+  .page__title {
+    text-align: center;
+    font-size: 2.5em; /* Larger title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Improve institution blocks styling */
+.institution-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5em;
+  gap: 2em;
+
+  .institution-logo {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .institution-description {
+    flex: 1;
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      margin: 0;
+      text-align: left; /* Override justify for description blocks */
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .institution-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .institution-logo {
+      width: 120px;
+    }
+
+    .institution-description p {
+      text-align: justify;
+    }
+  }
+
+  .page__hero--overlay .page__title {
+    font-size: 1.8em;
+  }
+
+  .page__content p {
+    font-size: 1.05em;
+  }
+}
