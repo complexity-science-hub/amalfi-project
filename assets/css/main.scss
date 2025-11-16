@@ -10,11 +10,51 @@ search: false
 
 /* Custom styles for AMALFI project */
 
-/* Landing page: center main content and improve typography */
+/* Landing page intro section */
+.landing-intro {
+  max-width: 900px;
+  margin: 3em auto;
+  text-align: center;
+  padding: 0 2em;
+
+  h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+
+  > p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin-bottom: 2.5em;
+    color: #555;
+  }
+
+  h3 {
+    font-size: 1.6em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: 600;
+  }
+
+  ul {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+
+    li {
+      font-size: 1.15em;
+      line-height: 1.9;
+      margin-bottom: 0.8em;
+    }
+  }
+}
+
+/* General page content styling */
 .page__content {
   p {
-    font-size: 1.125em; /* Increase body text size from default */
-    line-height: 1.8; /* Better readability */
+    font-size: 1.125em;
+    line-height: 1.8;
     text-align: justify;
     max-width: 800px;
     margin-left: auto;
@@ -60,6 +100,27 @@ search: false
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .landing-intro {
+    padding: 0 1.5em;
+    margin: 2em auto;
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+    > p {
+      font-size: 1.1em;
+    }
+
+    h3 {
+      font-size: 1.3em;
+    }
+
+    ul li {
+      font-size: 1em;
+    }
+  }
+
   .institution-block {
     flex-direction: column;
     align-items: center;
