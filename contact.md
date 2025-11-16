@@ -4,7 +4,7 @@ author_profile: false
 
 tagline: "Contact"
 header:
-  overlay_image: /amalfi-project/assets/images/background copy.png
+  overlay_image: /assets/images/background copy.png
 ---
 
 <b>Project Lead</b> <br />
